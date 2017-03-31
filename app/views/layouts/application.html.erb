@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alpha-blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+            <li><a href="/pages/faq">FAQ</a></li>
+              <li style="float:right"><input type="input" name="search" placeholder="SEARCH..">
+      </ul>
+    </header>
+
+    <%= yield %>
+
+  </body>
+</html>
