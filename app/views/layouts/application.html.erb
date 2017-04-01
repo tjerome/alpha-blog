@@ -9,16 +9,13 @@
   </head>
 
   <body>
-    <header>
+    
+    <% flash.each do |name, msg| %>
       <ul>
-        <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-            <li><a href="/pages/faq">FAQ</a></li>
-              <li style="float:right"><input type="input" name="search" placeholder="SEARCH..">
+        <li><%= msg %></li>
       </ul>
-    </header>
-
-    <%= yield %>
+    <% end %>
+  <%= yield %>
 
   </body>
 </html>
